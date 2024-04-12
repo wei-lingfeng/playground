@@ -67,6 +67,7 @@ let INPUTS: {[name: string]: InputFeature} = {
   "y": {f: (x, y) => y, label: "X_2"},
   "r": {f: (x, y) => Math.sqrt(x*x + y*y), label: "r"},
   "θ": {f: (x, y) => Math.atan2(y, x), label: "θ"},
+  "Feature": {f: (x, y) => 1 - ((0.7*Math.PI * Math.sqrt(x*x + y*y) - Math.atan2(x, y)) * Math.PI**(-1) + 0.5) % 2, label: "Feature"},
   "xSquared": {f: (x, y) => x * x, label: "X_1^2"},
   "ySquared": {f: (x, y) => y * y,  label: "X_2^2"},
   "xTimesY": {f: (x, y) => x * y, label: "X_1X_2"},
